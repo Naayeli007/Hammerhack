@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Cool Website</title>
+
+        <style>
+            img {
+                width: 600px;
+                height: auto;
+            }
+
+            h1 {
+                color: red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>My Cool Website</h1>
+        <p>I love cats!</p>
+
+        <img src="Garfield.png">
+
+        <blockquote>“In ancient times cats were worshipped as gods; they have not forgotten this.” – Terry Pratchett</blockquote>
+        <button onclick="changeQuote()">Change Quote</button>
+
+        <script>
+            var index = 0;
+
+            function changeQuote() {
+                var quotes = [
+                    `“I had been told that the training procedure with cats was difficult. It’s not. Mine had me trained in two days.” – Bill Dana`,
+                    `“Cats are inquisitive, but hate to admit it.” – Mason Cooley`,
+                    `“In ancient times cats were worshipped as gods; they have not forgotten this.” – Terry Pratchett`
+                ];
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+
+                index++;
+                if (index >= 4) {
+                    index = 0;
+                }
+            }
+        </script>
+    </body>
+</html>
